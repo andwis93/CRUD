@@ -2,7 +2,6 @@ package com.crud.tasks.controller;
 
 import com.crud.tasks.domain.TaskDto;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,27 +9,30 @@ import java.util.List;
 @RequestMapping("/v1/tasks")
 public class TaskController {
 
-    @GetMapping
+    @GetMapping(path ="/taskDtoList")
     public List<TaskDto> getTasks() {
-        return new ArrayList<>();
+        List<TaskDto> taskDtoList = new ArrayList<>();
+        taskDtoList.add(new TaskDto(1L,"First element","First content"));
+        taskDtoList.add(new TaskDto(2L,"Second element","Second content"));
+        taskDtoList.add(new TaskDto(3L,"Third element","Third content"));
+        return new ArrayList<>(taskDtoList);
     }
-    @GetMapping
-    public TaskDto getTask(Long taskId) {
+
+    @GetMapping(value = "{taskId}")
+    public TaskDto getTask(@PathVariable Long taskId) {
         return new TaskDto(1L, "test title", "test_content");
     }
 
-    @DeleteMapping
-    public void deleteTask(Long taskId) {
-
+    @DeleteMapping(value = "{taskId}")
+    public void deleteTask(@PathVariable Long taskId) {
     }
 
-    @PutMapping
-    public TaskDto updateTask(TaskDto taskDto) {
+    @PutMapping(value = "{taskId}")
+    public TaskDto updateTask(@PathVariable("taskId") Long taskId, TaskDto taskDto) {
         return new TaskDto(1L, "Edited test title", "Test content");
     }
 
-    @PostMapping
-    public void createTask(TaskDto taskDto) {
-
+    @PostMapping(value = "{taskId}")
+    public void createTask(@PathVariable Long taskId, TaskDto taskDto) {
     }
 }
