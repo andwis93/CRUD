@@ -1,5 +1,5 @@
 # https://spring.io/guides/gs/spring-boot-docker/
-FROM openjdk:17-jdk-alpine
+FROM openjdk:19-alpine
 
 ARG MYSQL_DB_URL
 ENV MYSQL_DB_URL ${MYSQL_DB_URL?notset}
