@@ -5,6 +5,7 @@ import com.crud.tasks.domain.TaskDto;
 import com.crud.tasks.mapper.TaskMapper;
 import com.crud.tasks.service.DbService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/v1/tasks")
 @RequiredArgsConstructor
+@CrossOrigin("*")
 public class TaskController {
 
     private final DbService service;
@@ -29,19 +31,21 @@ public class TaskController {
         return ResponseEntity.ok(taskMapper.mapToTaskDto(service.getTask(taskId)));
     }
 
-    @DeleteMapping
-    public ResponseEntity<Void> deleteTask(@RequestBody TaskDto taskDto) {
-        Task task = taskMapper.mapToTask(taskDto);
-        Long taskId = task.getId();
+    @DeleteMapping(value = "{taskId}")
+    public ResponseEntity<Void> deleteTask(@PathVariable Long taskId) throws EmptyResultDataAccessException {
         service.deleteTask(taskId);
         return ResponseEntity.ok().build();
     }
 
     @PutMapping
-    public ResponseEntity<TaskDto> updateTask(@RequestBody TaskDto taskDto) {
-        Task task = taskMapper.mapToTask(taskDto);
-        Task saveTask = service.saveTask(task);
-        return ResponseEntity.ok(taskMapper.mapToTaskDto(saveTask));
+    public ResponseEntity<TaskDto> updateTask(@RequestBody TaskDto taskDto) throws TaskNotFoundException  {
+            Task task = taskMapper.mapToTask(taskDto);
+        if(service.ifTaskExists(task.getId())) {
+            Task saveTask = service.saveTask(task);
+            return ResponseEntity.ok(taskMapper.mapToTaskDto(saveTask));
+        }else {
+            throw new TaskNotFoundException();
+        }
     }
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
