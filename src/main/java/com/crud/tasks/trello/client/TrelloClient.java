@@ -74,10 +74,6 @@ public class TrelloClient {
 //            return UriComponentsBuilder.fromHttpUrl(trelloApiEndpoint + "/boards/636cc8f3d867bd0029c52a00/cards" )
 //                    .queryParam("key", trelloAppKey)
 //                    .queryParam("token", trelloToken)
-//                    .queryParam("name", "name")
-//                    .queryParam("desc", "desc")
-//                    .queryParam("pos", "pos")
-//                    .queryParam("idList", "idList")
 //                    .build()
 //                    .encode()
 //                    .toUri();
