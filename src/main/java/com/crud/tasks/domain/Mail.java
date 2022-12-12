@@ -2,6 +2,9 @@ package com.crud.tasks.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
+import java.util.Optional;
 
 @Getter
 @AllArgsConstructor
@@ -42,7 +45,9 @@ public class Mail {
         }
 
         public Mail build() {
+
             return new Mail(mailTo, subject, message, toCcs);
         }
     }
+
 }
