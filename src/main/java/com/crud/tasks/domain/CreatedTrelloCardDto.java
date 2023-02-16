@@ -7,10 +7,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@JsonIgnoreProperties(ignoreUnknown = true)
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreateTrelloCard {
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class CreatedTrelloCardDto {
     @JsonProperty("id")
     private String id;
     @JsonProperty("name")
@@ -20,7 +20,7 @@ public class CreateTrelloCard {
     @JsonProperty("badges")
     private BadgesDto badges;
 
-    public CreateTrelloCard(String id, String name, String shortUrl) {
+    public CreatedTrelloCardDto(String id, String name, String shortUrl) {
         this.id = id;
         this.name = name;
         this.shortUrl = shortUrl;
