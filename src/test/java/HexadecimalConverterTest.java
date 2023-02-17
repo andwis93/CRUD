@@ -1,6 +1,5 @@
 import converter.HexadecimalConverter;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class HexadecimalConverterTest {
@@ -11,9 +10,9 @@ public class HexadecimalConverterTest {
         HexadecimalConverter hexadecimalConverter = new HexadecimalConverter();
 
         //When
-       String hexadecimal = hexadecimalConverter.convertToHexadecimal(1548689874648631287L);
+        String hexadecimal = hexadecimalConverter.convertToHexadecimal(1548689874648631287L);
 
-       //Then
+        //Then
         assertEquals("157E0D3C55AD07F7", hexadecimal);
     }
 }
