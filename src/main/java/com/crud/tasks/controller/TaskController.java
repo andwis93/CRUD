@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/v1/tasks")
+@RequestMapping("v1/tasks")
 @RequiredArgsConstructor
 @CrossOrigin("*")
 public class TaskController {
@@ -36,21 +36,21 @@ public class TaskController {
         return ResponseEntity.ok().build();
     }
 
-    @PutMapping
+    @PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<TaskDto> updateTask(@RequestBody TaskDto taskDto) throws TaskNotFoundException  {
             Task task = taskMapper.mapToTask(taskDto);
         if(service.ifTaskExists(task.getId())) {
-            Task saveTask = service.saveTask(task);
-            return ResponseEntity.ok(taskMapper.mapToTaskDto(saveTask));
+            Task savedTask = service.saveTask(task);
+            return ResponseEntity.ok(taskMapper.mapToTaskDto(savedTask));
         }else {
             throw new TaskNotFoundException();
         }
     }
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Void> createTask(@RequestBody TaskDto taskDto) {
-        Task task = taskMapper.mapToTask(taskDto);
-        service.saveTask(task);
-        return ResponseEntity.ok().build();
+    public ResponseEntity<TaskDto> createTask(@RequestBody TaskDto taskDto) {
+     Task savedTask = service.saveTask(taskMapper.mapToTask(taskDto));
+        return ResponseEntity.ok(taskMapper.mapToTaskDto(savedTask));
+
     }
 }

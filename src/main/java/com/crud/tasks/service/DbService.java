@@ -26,7 +26,7 @@ public class DbService {
     }
 
     public Task saveTask(final Task task)  {
-        return repository.save(task);
+        return repository.save((Task)task);
     }
 
     public void deleteTask(final Long taskId) throws EmptyResultDataAccessException {
