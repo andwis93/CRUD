@@ -16,22 +16,20 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import java.util.List;
-
 import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.when;
 
 @SpringJUnitWebConfig
 @WebMvcTest(TaskController.class)
 class TaskControllerTest {
-
     @Autowired
     private MockMvc mockMvc;
-
     @MockBean
     private DbService dbService;
-
     @MockBean
     private TaskMapper taskMapper;
+    Task task = new Task(1L,"Title", "Content");
+    TaskDto taskDto = new TaskDto(1L, "TitleDto", "ContentDto");
 
     @Test
     void shouldGetTasks() throws Exception {
@@ -53,8 +51,6 @@ class TaskControllerTest {
     @Test
     void shouldGetTask() throws Exception {
         //Given
-        Task task = new Task(1L,"Title", "Content");
-        TaskDto taskDto = new TaskDto(1L, "TitleDto", "ContentDto");
         when(dbService.getTask(any(Long.class))).thenReturn(task);
         when(taskMapper.mapToTaskDto(any(Task.class))).thenReturn(taskDto);
 
@@ -81,8 +77,6 @@ class TaskControllerTest {
     @Test
     void shouldUpdateTask() throws Exception {
         //Given
-        Task task = new Task(1L,"Title", "Content");
-        TaskDto taskDto = new TaskDto(1L, "TitleDto", "ContentDto");
         when(dbService.ifTaskExists(anyLong())).thenReturn(true);
         when(taskMapper.mapToTask(any())).thenReturn(task);
         when(taskMapper.mapToTaskDto(any())).thenReturn(taskDto);
@@ -104,7 +98,6 @@ class TaskControllerTest {
     @Test
     void shouldSaveTask() throws Exception {
         //Given
-        TaskDto taskDto = new TaskDto(1L, "TitleDto", "ContentDto");
         when(taskMapper.mapToTaskDto(any())).thenReturn(taskDto);
         Gson gson = new Gson();
         String jsonContent = gson.toJson(taskDto);
