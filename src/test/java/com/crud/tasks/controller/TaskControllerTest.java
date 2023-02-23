@@ -78,6 +78,7 @@ class TaskControllerTest {
     void shouldUpdateTask() throws Exception {
         //Given
         when(dbService.ifTaskExists(anyLong())).thenReturn(true);
+        when(dbService.saveTask(any())).thenReturn(task);
         when(taskMapper.mapToTask(any())).thenReturn(task);
         when(taskMapper.mapToTaskDto(any())).thenReturn(taskDto);
         Gson gson = new Gson();
@@ -98,7 +99,8 @@ class TaskControllerTest {
     @Test
     void shouldSaveTask() throws Exception {
         //Given
-        when(taskMapper.mapToTaskDto(any())).thenReturn(taskDto);
+        when(dbService.saveTask(any())).thenReturn(task);
+        when(taskMapper.mapToTaskDto(task)).thenReturn(taskDto);
         Gson gson = new Gson();
         String jsonContent = gson.toJson(taskDto);
 

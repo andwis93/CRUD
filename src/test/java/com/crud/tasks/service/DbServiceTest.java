@@ -11,13 +11,15 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-@SpringBootTest
 @Transactional
+@SpringBootTest
+
 public class DbServiceTest {
     @Autowired
     private DbService dbService;
     @Autowired
     private TaskRepository taskRepository;
+
 
     @Test
     void testFindAllTasks() throws TaskNotFoundException {
