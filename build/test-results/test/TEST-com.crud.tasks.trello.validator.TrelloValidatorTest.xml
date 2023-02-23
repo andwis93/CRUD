@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.crud.tasks.trello.validator.TrelloValidatorTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-02-23T12:19:25" hostname="LAPTOP-6257JG67" time="0.013">
+<testsuite name="com.crud.tasks.trello.validator.TrelloValidatorTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-02-23T12:44:26" hostname="LAPTOP-6257JG67" time="0.034">
   <properties/>
-  <testcase name="testValidateTrelloBoard()" classname="com.crud.tasks.trello.validator.TrelloValidatorTest" time="0.01"/>
-  <testcase name="testValidateCard()" classname="com.crud.tasks.trello.validator.TrelloValidatorTest" time="0.002"/>
-  <system-out><![CDATA[2023-02-23 13:19:25.149  INFO 9740 --- [    Test worker] c.c.t.trello.validator.TrelloValidator   : Starting filtering boards...
-2023-02-23 13:19:25.153  INFO 9740 --- [    Test worker] c.c.t.trello.validator.TrelloValidator   : Boards have been filtered. Current list size: 1
-2023-02-23 13:19:25.157  INFO 9740 --- [    Test worker] c.c.t.trello.validator.TrelloValidator   : Someone is testing my application!
+  <testcase name="testValidateTrelloBoard()" classname="com.crud.tasks.trello.validator.TrelloValidatorTest" time="0.029"/>
+  <testcase name="testValidateCard()" classname="com.crud.tasks.trello.validator.TrelloValidatorTest" time="0.004"/>
+  <system-out><![CDATA[2023-02-23 13:44:26.213  INFO 20544 --- [    Test worker] c.c.t.trello.validator.TrelloValidator   : Starting filtering boards...
+2023-02-23 13:44:26.232  INFO 20544 --- [    Test worker] c.c.t.trello.validator.TrelloValidator   : Boards have been filtered. Current list size: 1
+2023-02-23 13:44:26.237  INFO 20544 --- [    Test worker] c.c.t.trello.validator.TrelloValidator   : Someone is testing my application!
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
