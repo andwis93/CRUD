@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="HexadecimalConverterTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-23T11:21:06" hostname="LAPTOP-6257JG67" time="0.032">
+  <properties/>
+  <testcase name="testHexadecimalConverter()" classname="HexadecimalConverterTest" time="0.032"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.crud.tasks.trello.validator.TrelloValidatorTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-02-23T11:21:13" hostname="LAPTOP-6257JG67" time="0.014">
+  <properties/>
+  <testcase name="testValidateTrelloBoard()" classname="com.crud.tasks.trello.validator.TrelloValidatorTest" time="0.009"/>
+  <testcase name="testValidateCard()" classname="com.crud.tasks.trello.validator.TrelloValidatorTest" time="0.003"/>
+  <system-out><![CDATA[2023-02-23 12:21:13.974  INFO 3872 --- [    Test worker] c.c.t.trello.validator.TrelloValidator   : Starting filtering boards...
+2023-02-23 12:21:13.978  INFO 3872 --- [    Test worker] c.c.t.trello.validator.TrelloValidator   : Boards have been filtered. Current list size: 1
+2023-02-23 12:21:13.983  INFO 3872 --- [    Test worker] c.c.t.trello.validator.TrelloValidator   : Someone is testing my application!
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
