@@ -7,10 +7,11 @@ import com.crud.tasks.trello.validator.TrelloValidator;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 
-@Component
-@Data
+@Service
 @RequiredArgsConstructor
 public class TrelloFacade {
     private final TrelloService trelloService;
