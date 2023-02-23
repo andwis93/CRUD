@@ -4,11 +4,13 @@ import com.crud.tasks.domain.*;
 import com.crud.tasks.mapper.TrelloMapper;
 import com.crud.tasks.service.TrelloService;
 import com.crud.tasks.trello.validator.TrelloValidator;
+import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
+@Data
 @RequiredArgsConstructor
 public class TrelloFacade {
     private final TrelloService trelloService;
