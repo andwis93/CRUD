@@ -15,34 +15,34 @@ import static org.mockito.Mockito.verify;
 @ExtendWith(MockitoExtension.class)
 class SimpleEmailServiceTest {
 
-//    @InjectMocks
-//    private SimpleEmailService simpleEmailService;
-//
-//    @Mock
-//    private JavaMailSender javaMailSender;
-//
-//    @Test
-//    public void shouldSendEmail() {
-//        //Give
-//        Mail mail = new Mail.MailBuilder()
-//                .mailTo("test@test.com")
-//                .subject("Test")
-//                .message("Test Message")
-//                .toCcs("testCc@testCc.com")
-//                .toCcs("SecondTestCc@testCc.com")
-//                .build();
-//
-//        SimpleMailMessage mailMessage = new SimpleMailMessage();
-//
-//        mailMessage.setTo(mail.getMailTo());
-//        mailMessage.setSubject(mail.getSubject());
-//        mailMessage.setText(mail.getMessage());
-//        Optional.ofNullable(mail.getToCcs()).ifPresent(Cc -> mailMessage.setCc(mail.getToCcs()));
-//
-//        //When
-//        simpleEmailService.send(mail);
-//
-//        //Then
-//        verify(javaMailSender, times(1)).send(mailMessage);
-//    }
+    @InjectMocks
+    private SimpleEmailService simpleEmailService;
+
+    @Mock
+    private JavaMailSender javaMailSender;
+
+    @Test
+    public void shouldSendEmail() {
+        //Give
+        Mail mail = new Mail.MailBuilder()
+                .mailTo("test@test.com")
+                .subject("Test")
+                .message("Test Message")
+                .toCcs("testCc@testCc.com")
+                .toCcs("SecondTestCc@testCc.com")
+                .build();
+
+        SimpleMailMessage mailMessage = new SimpleMailMessage();
+
+        mailMessage.setTo(mail.getMailTo());
+        mailMessage.setSubject(mail.getSubject());
+        mailMessage.setText(mail.getMessage());
+        Optional.ofNullable(mail.getToCcs()).ifPresent(Cc -> mailMessage.setCc(mail.getToCcs()));
+
+        //When
+        simpleEmailService.send(mail);
+
+        //Then
+        verify(javaMailSender, times(1)).send(mailMessage);
+    }
 }
