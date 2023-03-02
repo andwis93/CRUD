@@ -20,7 +20,7 @@ public class EmailScheduler {
     public void sendInformationEmail() {
         long size = taskRepository.count();
         String taskPluralOrSingular = size != 1 ? "tasks" : "task";
-        simpleEmailService.send(
+        simpleEmailService.sendDaily(
                 new Mail(
                         adminConfig.getAdminMail(),
                         SUBJECT,
