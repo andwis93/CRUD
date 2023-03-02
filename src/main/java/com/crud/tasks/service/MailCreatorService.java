@@ -57,6 +57,7 @@ public class MailCreatorService {
         context.setVariable("tasks_url", "https://andwis93.github.io/");
         context.setVariable("show_button", true);
         context.setVariable("application_functionality", functionality);
+        context.setVariable("footer", "Live your life to the fullest");
         return templateEngine.process("mail/created-inf-task-mail", context);
     }
 
