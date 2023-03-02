@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.018s</div>
+<div class="counter">0.032s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,17 +79,17 @@
 </thead>
 <tr>
 <td class="success">testMapToTask()</td>
-<td class="success">0.005s</td>
+<td class="success">0.011s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testMapToTaskDto()</td>
-<td class="success">0.006s</td>
+<td class="success">0.009s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testMapToTaskDtoList()</td>
-<td class="success">0.007s</td>
+<td class="success">0.012s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -97,12 +97,12 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2023-03-01 15:16:14.624  INFO 4204 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.crud.tasks.mapper.TaskMapperTest], using SpringBootContextLoader
-2023-03-01 15:16:14.625  INFO 4204 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.crud.tasks.mapper.TaskMapperTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2023-03-01 15:16:14.625  INFO 4204 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.crud.tasks.mapper.TaskMapperTest]: TaskMapperTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-03-01 15:16:14.639  INFO 4204 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.crud.tasks.TasksApplication for test class com.crud.tasks.mapper.TaskMapperTest
-2023-03-01 15:16:14.645  INFO 4204 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2023-03-01 15:16:14.645  INFO 4204 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@27dfd12b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4348fa35, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@563843f1, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@38cb1606, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@61c4cebd, org.springframework.test.context.support.DirtiesContextTestExecutionListener@655909e2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@716ae973, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1171ba7e, org.springframework.test.context.event.EventPublishingTestExecutionListener@56872fcb, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7b3c2ae0, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5d3b6585, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@41059616, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2e93108a, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@34e25492, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@32f308c6]
+<pre>2023-03-02 11:36:09.702  INFO 42544 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.crud.tasks.mapper.TaskMapperTest], using SpringBootContextLoader
+2023-03-02 11:36:09.703  INFO 42544 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.crud.tasks.mapper.TaskMapperTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-03-02 11:36:09.703  INFO 42544 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.crud.tasks.mapper.TaskMapperTest]: TaskMapperTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-03-02 11:36:09.720  INFO 42544 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.crud.tasks.TasksApplication for test class com.crud.tasks.mapper.TaskMapperTest
+2023-03-02 11:36:09.728  INFO 42544 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-03-02 11:36:09.728  INFO 42544 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1f5d7fd5, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@cf08c97, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@37c87fcc, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@ca2be53, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@78f5cbc5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@70697478, org.springframework.test.context.transaction.TransactionalTestExecutionListener@42b43a6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1d622556, org.springframework.test.context.event.EventPublishingTestExecutionListener@4b9f7edc, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@70ee1963, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2e0652ab, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@22c29aa8, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@129b69b2, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@12be4f83, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@eb1d475]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -112,21 +112,22 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.7.9)
 
-2023-03-01 15:16:14.686  INFO 4204 --- [    Test worker] com.crud.tasks.mapper.TaskMapperTest     : Starting TaskMapperTest using Java 17.0.4 on LAPTOP-6257JG67 with PID 4204 (started by wisni in C:\Users\wisni\dev\tasks)
-2023-03-01 15:16:14.686  INFO 4204 --- [    Test worker] com.crud.tasks.mapper.TaskMapperTest     : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2023-03-01 15:16:15.874  INFO 4204 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-03-01 15:16:15.968  INFO 4204 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 1 JPA repository interfaces.
-2023-03-01 15:16:16.618  INFO 4204 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-03-01 15:16:16.700  INFO 4204 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2023-03-01 15:16:16.762  INFO 4204 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-03-01 15:16:16.949  INFO 4204 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-03-01 15:16:17.262  INFO 4204 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-03-01 15:16:17.285  INFO 4204 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
-2023-03-01 15:16:18.160  INFO 4204 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-03-01 15:16:18.182  INFO 4204 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-03-01 15:16:19.204  WARN 4204 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-03-01 15:16:23.075  INFO 4204 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoint(s) beneath base path '/actuator'
-2023-03-01 15:16:23.202  INFO 4204 --- [    Test worker] com.crud.tasks.mapper.TaskMapperTest     : Started TaskMapperTest in 8.553 seconds (JVM running for 22.932)
+2023-03-02 11:36:09.780  INFO 42544 --- [    Test worker] com.crud.tasks.mapper.TaskMapperTest     : Starting TaskMapperTest using Java 17.0.4 on LAPTOP-6257JG67 with PID 42544 (started by wisni in C:\Users\wisni\dev\tasks)
+2023-03-02 11:36:09.780  INFO 42544 --- [    Test worker] com.crud.tasks.mapper.TaskMapperTest     : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2023-03-02 11:36:11.124  INFO 42544 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-02 11:36:11.223  INFO 42544 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 1 JPA repository interfaces.
+2023-03-02 11:36:11.962  INFO 42544 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-02 11:36:12.047  INFO 42544 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-03-02 11:36:12.099  INFO 42544 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-03-02 11:36:12.303  INFO 42544 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-02 11:36:12.558  INFO 42544 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-02 11:36:12.586  INFO 42544 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2023-03-02 11:36:13.123  INFO 42544 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-02 11:36:13.132  INFO 42544 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-02 11:36:14.232  WARN 42544 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-02 11:36:14.594  INFO 42544 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-03-02 11:36:16.919  INFO 42544 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoint(s) beneath base path '/actuator'
+2023-03-02 11:36:17.030  INFO 42544 --- [    Test worker] com.crud.tasks.mapper.TaskMapperTest     : Started TaskMapperTest in 7.299 seconds (JVM running for 15.714)
 </pre>
 </span>
 </div>
@@ -138,7 +139,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.5.1</a> at 1 mar 2023, 15:16:29</p>
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at 2 mar 2023, 11:36:19</p>
 </div>
 </div>
 </body>

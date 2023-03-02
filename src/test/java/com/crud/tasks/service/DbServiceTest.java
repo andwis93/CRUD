@@ -13,7 +13,6 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @Transactional
 @SpringBootTest
-
 public class DbServiceTest {
     @Autowired
     private DbService dbService;
